@@ -131,7 +131,7 @@
                 android:textSize="17dp"/>
 
             <EditText
-                android:id="@+id/iron2"
+                android:id="@+id/height4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -149,7 +149,7 @@
                 android:textSize="17dp"/>
 
             <EditText
-                android:id="@+id/hemo2"
+                android:id="@+id/weight4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -210,7 +210,7 @@
 
 
             <RadioGroup
-                android:id="@+id/radioheight"
+                android:id="@+id/unit4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -241,7 +241,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/fat1"
+                android:id="@+id/hemo4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -260,7 +260,7 @@
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/allopath"
+                android:id="@+id/allopath4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Allopath"
@@ -278,7 +278,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/ayush"
+                android:id="@+id/ayush4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ayush"

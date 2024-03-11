@@ -29,14 +29,14 @@ public class Children3Y6YNutrition extends AppCompatActivity {
         Vitamin1 = findViewById(R.id.Vitamin1);
         Calcium1 = findViewById(R.id.Calcium1);
 
-        allopath = findViewById(R.id.allopath);
+        allopath = findViewById(R.id.allopath4);
         homopathy = findViewById(R.id.homopathy);
-        ayush = findViewById(R.id.ayush);
+        ayush = findViewById(R.id.ayush4);
 
-        height = findViewById(R.id.iron2);
-        weight = findViewById(R.id.hemo2);
+        height = findViewById(R.id.height4);
+        weight = findViewById(R.id.weight4);
         fat = findViewById(R.id.fat);
-        hemoglobin = findViewById(R.id.fat1);
+        hemoglobin = findViewById(R.id.hemo4);
 
 
         if(FalicAcid1.isSelected())
@@ -69,7 +69,7 @@ public class Children3Y6YNutrition extends AppCompatActivity {
             service=service+","+(ayush.getText().toString());
         }
 
-        radio = findViewById(R.id.radioheight);
+        radio = findViewById(R.id.unit4);
 
         btn = findViewById(R.id.submitI);
 

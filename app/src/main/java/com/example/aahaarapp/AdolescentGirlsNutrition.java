@@ -1,7 +1,5 @@
 package com.example.aahaarapp;
 
-import static com.example.aahaarapp.R.id.radiogrp;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -28,8 +26,8 @@ public class AdolescentGirlsNutrition extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adolescent_girls_nutrition);
 
-        iron = findViewById(R.id.iron2);
-        hemoglobin = findViewById(R.id.hemo2);
+        iron = findViewById(R.id.height2);
+        hemoglobin = findViewById(R.id.weight3);
 
         weight = findViewById(R.id.weight3);
         height = findViewById(R.id.height2);
@@ -40,7 +38,7 @@ public class AdolescentGirlsNutrition extends AppCompatActivity {
 
         helper = new MyDbHelperAdolescentBoys(this);
         radio = findViewById(R.id.radiogrp);
-        radioht = findViewById(R.id.radioheight);
+        radioht = findViewById(R.id.unit4);
 
         if(allopath.isSelected())
         {
@@ -58,20 +56,20 @@ public class AdolescentGirlsNutrition extends AppCompatActivity {
 
 
             // Retrieve the selected RadioButton text
-            // inside the OnClickListener
             int selectedId = radio.getCheckedRadioButtonId();
             int selectedId1 = radioht.getCheckedRadioButtonId();
-            if (selectedId != -1) {
-                radio = findViewById(selectedId);
-                String radio = r.getText().toString();
-                radioht = findViewById(selectedId);
-                String radio1 = r2.getText().toString();
+            if (selectedId != -1 && selectedId1 != -1) {
+                RadioButton selectedRadioButton = findViewById(selectedId);
+                String radio1 = selectedRadioButton.getText().toString();
+
+                RadioButton selectedRadioButton2 = findViewById(selectedId1);
+                String radio2 = selectedRadioButton2.getText().toString();
                 String height2=height.getText().toString();
                 String weight2=weight.getText().toString();
                 String iron1= iron.getText().toString();
                 String hemoglobin1=hemoglobin.getText().toString();
                 String weight1=weight.getText().toString();
-                helper.updateColumns(mobileno,radio,iron1,hemoglobin1,service,radio1,height2,weight2);
+                helper.updateColumns(mobileno,radio1,iron1,hemoglobin1,service,radio2,height2,weight2);
                 Toast.makeText(AdolescentGirlsNutrition.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), Logup.class);

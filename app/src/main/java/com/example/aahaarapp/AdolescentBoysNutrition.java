@@ -29,13 +29,13 @@ public class AdolescentBoysNutrition extends AppCompatActivity {
         Vitamin1 = findViewById(R.id.Vitamin1);
         Calcium1 = findViewById(R.id.Calcium1);
 
-        allopath = findViewById(R.id.alopath1);
+        allopath = findViewById(R.id.allopath1);
         homopathy = findViewById(R.id.hemopathy1);
         ayush = findViewById(R.id.ayush1);
 
-        height = findViewById(R.id.iron2);
-        weight = findViewById(R.id.hemo2);
-        fat = findViewById(R.id.fat1);
+        height = findViewById(R.id.height4);
+        weight = findViewById(R.id.weight4);
+        fat = findViewById(R.id.hemo4);
         hemoglobin = findViewById(R.id.weight3);
 
 
@@ -69,7 +69,7 @@ public class AdolescentBoysNutrition extends AppCompatActivity {
             service=service+","+(ayush.getText().toString());
         }
 
-        radio = findViewById(R.id.radioheight);
+        radio = findViewById(R.id.unit4);
 
         btn = findViewById(R.id.submitI);
 

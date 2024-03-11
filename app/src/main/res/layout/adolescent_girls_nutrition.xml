@@ -120,7 +120,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/iron2"
+                android:id="@+id/height4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -139,7 +139,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/hemo2"
+                android:id="@+id/weight4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -209,7 +209,7 @@
 
 
             <RadioGroup
-                android:id="@+id/radioheight"
+                android:id="@+id/unit4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">

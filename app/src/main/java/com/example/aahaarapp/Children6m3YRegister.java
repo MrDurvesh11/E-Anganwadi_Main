@@ -16,8 +16,8 @@ public class Children6m3YRegister extends AppCompatActivity {
     EditText name, mother, mobile, weight, height;
     RadioGroup height_ut;
     RadioButton r;
+    MyDBHelperChildern6m3y helper;
     Button btn;
-    MyDBHelper6m3y helper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.children_6m_3y_register);
@@ -29,7 +29,7 @@ public class Children6m3YRegister extends AppCompatActivity {
         height = findViewById(R.id.edit5);
         height_ut = findViewById(R.id.rg1);
         btn = findViewById(R.id.submit_area);
-        helper = new MyDBHelper6m3y(this);
+        helper = new MyDBHelperChildern6m3y(this);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +46,7 @@ public class Children6m3YRegister extends AppCompatActivity {
                     r = findViewById(selectedId);
                     String heightn = r.getText().toString();
 
-                    helper.children6m3yRegister(namestr, motherstr, mobilestr, weigthstr, heightn, heightstr);
+                    helper.childrenRegister(namestr, motherstr, mobilestr, weigthstr, heightn, heightstr);
                     sendSms(mobilestr,"Your data has been successfully registered for Children 6 month to 3 year Program.We will keep you updated with the latest information. Thank you for registering with us.");
                     Toast.makeText(Children6m3YRegister.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
 

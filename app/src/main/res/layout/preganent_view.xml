@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Preganent_Nutrition">
+    tools:context=".Pregnant_view">
 
 
 
@@ -61,7 +61,100 @@
             android:layout_marginTop="10dp"
             />
 
+        <LinearLayout
+            android:id="@+id/personal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_edittext"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Persoanl Information"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Name:"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bordered_edittext"
+                android:hint=""
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp" />
 
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Date of Birth"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bordered_edittext"
+                android:hint=""
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/Mobile_No"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bordered_edittext"
+                android:hint=""
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Delivery Date"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/delivary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bordered_edittext"
+                android:hint=""
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="18dp" />
+        </LinearLayout>
 
          <LinearLayout
             android:layout_width="match_parent"
@@ -95,14 +188,14 @@
                  android:orientation="horizontal">
 
                  <RadioButton
-                     android:id="@+id/inch"
+                     android:id="@+id/radioButtonInch"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_marginEnd="30dp"
                      android:text="Inch" />
 
                  <RadioButton
-                     android:id="@+id/cm"
+                     android:id="@+id/radioCM"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:text="CM" />
@@ -118,7 +211,7 @@
                  android:textSize="17dp"/>
 
              <EditText
-                 android:id="@+id/iron2"
+                 android:id="@+id/height"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -136,7 +229,7 @@
                  android:textSize="17dp"/>
 
              <EditText
-                 android:id="@+id/hemo2"
+                 android:id="@+id/weight"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -156,7 +249,7 @@
                  tools:ignore="TextSizeCheck" />
 
              <EditText
-                 android:id="@+id/fat1"
+                 android:id="@+id/hemoglobin"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -197,7 +290,7 @@
 
 
             <CheckBox
-                android:id="@+id/alopath1"
+                android:id="@+id/FalicAcid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Falic Acid"
@@ -206,7 +299,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/hemopathy1"
+                android:id="@+id/Iron"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Iron"
@@ -215,7 +308,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/ayush1"
+                android:id="@+id/Vitamin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vitamin"
@@ -242,7 +335,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/weight3"
+                android:id="@+id/energy"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"

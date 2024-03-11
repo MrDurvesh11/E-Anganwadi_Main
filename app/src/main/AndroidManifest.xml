@@ -48,14 +48,13 @@
         <activity android:name=".Preganent_Register"/>
         <activity android:name=".Children0M6MAdd"/>
         <activity android:name=".Children0M6MNutrition"/>
-        <activity android:name=".Children0M6MRegister"/>
+        <activity android:name=".LactatingMother_register"/>
         <activity android:name=".Children3Y6YAdd"/>
         <activity android:name=".Children3Y6YRegister"/>
         <activity android:name=".Children3Y6YNutrition"/>
         <activity android:name=".Children6M3YAdd"/>
         <activity android:name=".Children6M3YNutrition"/>
         <activity android:name=".Children6m3YRegister"/>
-        <activity android:name=".LactatingMother_register"/>
         <activity android:name=".LactatingMother_add"/>
         <activity android:name=".LactatingMother_Nutrition"/>
         <activity android:name=".AdolescentGirlsAdd"/>
@@ -64,6 +63,8 @@
         <activity android:name=".AdolescentBoysAdd"/>
         <activity android:name=".AdolescentBoysRegister"/>
         <activity android:name=".AdolescentBoysNutrition"/>
+        <activity android:name=".List1"/>
+        <activity android:name=".Pregnant_view"/>
 
 
 
@@ -78,6 +79,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <receiver android:name=".LactatingMother_add"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.ACTION_CALL_FUNCTION" />
+            </intent-filter>
+        </receiver>
     </application>
 
 

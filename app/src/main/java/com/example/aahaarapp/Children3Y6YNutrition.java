@@ -2,7 +2,6 @@ package com.example.aahaarapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -30,14 +29,14 @@ public class Children3Y6YNutrition extends AppCompatActivity {
         Vitamin1 = findViewById(R.id.Vitamin1);
         Calcium1 = findViewById(R.id.Calcium1);
 
-        allopath = findViewById(R.id.allopath);
+        allopath = findViewById(R.id.allopath4);
         homopathy = findViewById(R.id.homopathy);
-        ayush = findViewById(R.id.ayush);
+        ayush = findViewById(R.id.ayush4);
 
-        height = findViewById(R.id.height);
-        weight = findViewById(R.id.weight);
+        height = findViewById(R.id.height4);
+        weight = findViewById(R.id.weight4);
         fat = findViewById(R.id.fat);
-        hemoglobin = findViewById(R.id.hemoglobin);
+        hemoglobin = findViewById(R.id.hemo4);
 
 
         if(FalicAcid1.isSelected())
@@ -70,36 +69,33 @@ public class Children3Y6YNutrition extends AppCompatActivity {
             service=service+","+(ayush.getText().toString());
         }
 
-        radio = findViewById(R.id.radioheight);
+        radio = findViewById(R.id.unit4);
 
         btn = findViewById(R.id.submitI);
 
         helper = new MyDBHelperChildren3y6yRegister(this);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String heightn = height.getText().toString();
-                String weightn = weight.getText().toString();
-                String fatn = fat.getText().toString();
-                String hemoglobinn = hemoglobin.getText().toString();
+        btn.setOnClickListener(view -> {
+            String heightn = height.getText().toString();
+            String weightn = weight.getText().toString();
+            String fatn = fat.getText().toString();
+            String hemoglobinn = hemoglobin.getText().toString();
 
-                // Retrieve the selected RadioButton text
-                // inside the OnClickListener
-                int selectedId = radio.getCheckedRadioButtonId();
-                if (selectedId != -1) {
-                    r = findViewById(selectedId);
-                    String radion = r.getText().toString();
+            // Retrieve the selected RadioButton text
+            // inside the OnClickListener
+            int selectedId = radio.getCheckedRadioButtonId();
+            if (selectedId != -1) {
+                r = findViewById(selectedId);
+                String radion = r.getText().toString();
 
-                    helper.updateColumns(mobileno,nurtrition,heightn,weightn,fatn,radion,hemoglobinn,service);
-                    Toast.makeText(Children3Y6YNutrition.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+                helper.updateColumns(mobileno,nurtrition,heightn,weightn,fatn,radion,hemoglobinn,service);
+                Toast.makeText(Children3Y6YNutrition.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(getApplicationContext(), Logup.class);
-                    startActivity(intent);
-                } else {
-                    // Handle the case where no RadioButton is selected
-                    Toast.makeText(Children3Y6YNutrition.this, "Please Select ALl the Fields", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(getApplicationContext(), Logup.class);
+                startActivity(intent);
+            } else {
+                // Handle the case where no RadioButton is selected
+                Toast.makeText(Children3Y6YNutrition.this, "Please Select ALl the Fields", Toast.LENGTH_SHORT).show();
             }
         });
     }

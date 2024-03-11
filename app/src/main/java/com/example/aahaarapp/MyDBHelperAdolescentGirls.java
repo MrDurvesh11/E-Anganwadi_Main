@@ -16,8 +16,17 @@ public class MyDBHelperAdolescentGirls extends SQLiteOpenHelper {
     private static final String name = "Name";
     private static final String dob = "Dob";
     private static final String yob = "Yob";
-    private static final String father = "Father";
-    private static final String mother = "Mother";
+    private static final String Father = "Father";
+    private static final String Mother = "Mother";
+private static final String menstrual_cycle="menstrual_cycle";
+    private static final String iron = "Iron";
+    private static final String hemo = "Hemoglobin";
+    private static final String service = "Service";
+    private static final String height_unit = "Height_unit";
+    private static final String height = "Height";
+    private static final String weight = "Weight";
+
+
 
     private static final String mobileNo = "Mobile_No";
     public MyDBHelperAdolescentGirls(@Nullable Context context) {
@@ -29,7 +38,8 @@ public class MyDBHelperAdolescentGirls extends SQLiteOpenHelper {
         String query_reg = "CREATE TABLE " + TABLE_NAME + " ("
                 + mobileNo + " TEXT PRIMARY KEY, "
                 + name + "TEXT" + dob + "TEXT" + yob + "TEXT"
-                + father + " TEXT"+mother+"TEXT)";
+                + Father + " TEXT"+Mother+"TEXT"+menstrual_cycle+"Text" + iron+"Text"+hemo
+                +"Text"+service+"Text"+height_unit+"Text"+height+"Text"+weight+"Text)";
         db.execSQL(query_reg);
     }
 
@@ -45,9 +55,29 @@ public class MyDBHelperAdolescentGirls extends SQLiteOpenHelper {
         values.put(name,name1 );
         values.put(dob,dob1);
         values.put(yob,yob1);
-        values.put(father,father);
-        values.put(mother,mother);
+        values.put(Father,father);
+        values.put(Mother,mother);
+        values.put(menstrual_cycle,"");
+        values.put(iron,"");
+        values.put(hemo,"");
+        values.put(service,"");
+        values.put(height_unit,"");
+        values.put(height,"");
+        values.put(weight,"");
         db.insert(TABLE_NAME, null, values);
+        db.close();
+    }
+    public void updateColumns(String id, String value1, String value2, String value3,String value4,String value5,String value6,String value7) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(menstrual_cycle, value1);
+        values.put(iron, value2);
+        values.put(hemo, value3);
+        values.put(service, value4);
+        values.put(height_unit, value5);
+        values.put(height, value6);
+        values.put(weight, value7);
+        db.update(TABLE_NAME, values, mobileNo + " = ?", new String[]{id});
         db.close();
     }
 }

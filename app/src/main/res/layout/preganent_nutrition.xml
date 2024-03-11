@@ -93,14 +93,14 @@
                  android:orientation="horizontal">
 
                  <RadioButton
-                     android:id="@+id/radioButtonInch"
+                     android:id="@+id/inch"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_marginEnd="30dp"
                      android:text="Inch" />
 
                  <RadioButton
-                     android:id="@+id/radioCM"
+                     android:id="@+id/cm"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:text="CM" />
@@ -116,7 +116,7 @@
                  android:textSize="17dp"/>
 
              <EditText
-                 android:id="@+id/height"
+                 android:id="@+id/iron2"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -134,7 +134,7 @@
                  android:textSize="17dp"/>
 
              <EditText
-                 android:id="@+id/weight"
+                 android:id="@+id/hemo2"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -154,7 +154,7 @@
                  tools:ignore="TextSizeCheck" />
 
              <EditText
-                 android:id="@+id/hemoglobin"
+                 android:id="@+id/fat1"
                  android:layout_width="match_parent"
                  android:layout_height="48dp"
                  android:layout_margin="8dp"
@@ -195,7 +195,7 @@
 
 
             <CheckBox
-                android:id="@+id/FalicAcid"
+                android:id="@+id/alopath1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Falic Acid"
@@ -204,7 +204,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/Iron"
+                android:id="@+id/hemopathy1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Iron"
@@ -213,7 +213,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/Vitamin"
+                android:id="@+id/ayush1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vitamin"
@@ -240,7 +240,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/energy"
+                android:id="@+id/weight3"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"

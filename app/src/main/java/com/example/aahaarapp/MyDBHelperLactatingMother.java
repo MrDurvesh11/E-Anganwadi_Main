@@ -89,5 +89,17 @@ public class MyDBHelperLactatingMother extends SQLiteOpenHelper {
         }
         return cursor;
     }
+    public void updateColumns(String id, String value1, String value2, String value3,String value4,String value5,String value6) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Height_Unit, value1);
+        values.put(Height, value2);
+        values.put(Weight, value3);
+        values.put(Hemoglobin, value4);
+        values.put(Provided_With, value5);
+        values.put(Health_Service, value6);
 
+        db.update(TABLE_NAME_Lac, values, Mobile_number + " = ?", new String[]{id});
+        db.close();
+    }
 }

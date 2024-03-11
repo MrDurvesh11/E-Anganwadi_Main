@@ -42,11 +42,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
                 + Issue_COL + " TEXT)";
         db.execSQL(queryIssues);
 
-        // Create Register Database
-        String queryRegister = "CREATE TABLE " + TABLE_NAME_Reg + " ("
-                + Mobile_Number + " TEXT PRIMARY KEY, "
-                + MPIN + " TEXT)";
-        db.execSQL(queryRegister);
+
 
 
     }
@@ -69,4 +65,5 @@ public class MyDBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
 }

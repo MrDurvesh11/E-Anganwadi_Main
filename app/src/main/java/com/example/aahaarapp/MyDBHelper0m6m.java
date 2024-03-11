@@ -80,4 +80,19 @@ public class MyDBHelper0m6m extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+    public void updateColumns(String id, String value1, String value2, String value3,String value4,String value5,String value6) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(Nutritional, value1);
+        values.put(Energy, value2);
+        values.put(Protein, value3);
+        values.put(Fat, value4);
+        values.put(Food_Solid, value5);
+        values.put(Hemoglobin, value6);
+
+        db.update(TABLE_NAME_Lac, values, Mobile_number + " = ?", new String[]{id});
+        db.close();
+    }
+
 }

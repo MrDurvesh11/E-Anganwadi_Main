@@ -92,7 +92,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButtonInch"
+                    android:id="@+id/inch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
@@ -100,7 +100,7 @@
                     android:layout_marginRight="30dp" />
 
                 <RadioButton
-                    android:id="@+id/radioCM"
+                    android:id="@+id/cm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CM" />
@@ -116,7 +116,7 @@
                 android:textSize="17dp"/>
 
             <EditText
-                android:id="@+id/height"
+                android:id="@+id/iron2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -134,7 +134,7 @@
                 android:textSize="17dp"/>
 
             <EditText
-                android:id="@+id/weight"
+                android:id="@+id/hemo2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -154,7 +154,7 @@
                 tools:ignore="TextSizeCheck" />
 
             <EditText
-                android:id="@+id/hemoglobin"
+                android:id="@+id/fat1"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"

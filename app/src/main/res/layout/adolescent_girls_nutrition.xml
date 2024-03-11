@@ -88,6 +88,7 @@
                 android:textStyle="bold" />
 
             <RadioGroup
+                android:id="@+id/radiogrp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -119,7 +120,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/height"
+                android:id="@+id/iron2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -138,7 +139,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/weight"
+                android:id="@+id/hemo2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -158,19 +159,19 @@
                 tools:ignore="TextSizeCheck" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/Allopath2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Allopath" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/Hamopathy2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hamopathy" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/Ayush2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ayush" />
@@ -214,7 +215,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButtonInch"
+                    android:id="@+id/inch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
@@ -222,7 +223,7 @@
                     android:text="Inch" />
 
                 <RadioButton
-                    android:id="@+id/radioCM"
+                    android:id="@+id/cm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CM" />
@@ -239,7 +240,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/energy"
+                android:id="@+id/height2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
@@ -258,12 +259,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/energy"
+                android:id="@+id/weight3"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/bordered_edittext"
-                android:hint="  Enter The Weight"
+                android:hint="  Enter The Height"
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="18dp" />
 

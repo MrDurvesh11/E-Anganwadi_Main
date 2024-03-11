@@ -21,6 +21,15 @@ public class MyDbHelperAdolescentBoys extends SQLiteOpenHelper {
     private static final String mother = "Mother";
 
     private static final String mobileNo = "Mobile_No";
+    private static final String Nutritional_Supplements = "NutritionalSupplements";
+    private static final String Energy_Intake = "EnergyIntake";
+    private static final String Protein_Intake = "ProteinIntake";
+    private static final String Fat_Intake = "FatIntake";
+    private static final String Food_Solids = "FoodSolids";
+    private static final String Hemoglobin = "Hemoglobin";
+    private static final String Health_Service = "HealthService";
+
+
     public MyDbHelperAdolescentBoys(@Nullable Context context) {
         super(context,DB_NAME,null, DB_VERSION);
     }
@@ -48,7 +57,30 @@ public class MyDbHelperAdolescentBoys extends SQLiteOpenHelper {
         values.put(yob,yob1);
         values.put(father,father);
         values.put(mother,mother);
+        values.put(Nutritional_Supplements,"");
+        values.put(Energy_Intake,"");
+        values.put(Protein_Intake,"");
+        values.put(Fat_Intake,"");
+        values.put(Food_Solids,"");
+        values.put(Hemoglobin,"");
+        values.put(Health_Service,"");
+
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
+    public void updateColumns(String id, String value1, String value2, String value3,String value4,String value5,String value6,String value7) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Nutritional_Supplements, value1);
+        values.put(Energy_Intake, value2);
+        values.put(Protein_Intake, value3);
+        values.put(Fat_Intake, value4);
+        values.put(Food_Solids, value5);
+        values.put(Hemoglobin, value6);
+        values.put(Health_Service, value7);
+        db.update(TABLE_NAME, values, mobileNo + " = ?", new String[]{id});
+        db.close();
+    }
+
+
 }

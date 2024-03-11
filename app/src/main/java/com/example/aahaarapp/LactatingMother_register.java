@@ -13,19 +13,19 @@
     import java.util.LinkedList;
     import java.util.List;
 
-    public class LactatingMother_register extends AppCompatActivity {
+    public class LactatingMother_register extends AppCompatActivity  {
         EditText name, birthDate, birthYear, mobileNo, deliveryDate;
         RadioGroup gender;
         RadioButton r;
         Button btn;
         MyDBHelperLactatingMother helper;
-
+//        LactatingMother_register.setButtonClick();
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.lactating_register);
-            ButtonClickListener listener;
-            listener = (ButtonClickListener) new LactatingMother_add();
+//            ButtonClickListener listener;
+//            listener = (ButtonClickListener) new LactatingMother_add();
             name = findViewById(R.id.edit1);
             birthDate = findViewById(R.id.edit2);
             birthYear = findViewById(R.id.edit3);
@@ -38,37 +38,35 @@
             helper = new MyDBHelperLactatingMother(this);
             List<String> items = new LinkedList<>();
             DemoAdapter da=new DemoAdapter(items);
-            btn.setOnClickListener(view -> {
-                String namestr = name.getText().toString();
-                String birthDaten = birthDate.getText().toString();
-                String birthYearn = birthYear.getText().toString();
-                String mobileNon = mobileNo.getText().toString();
-                String deliveryDaten = deliveryDate.getText().toString();
-                int age=(2024-Integer.parseInt(birthYearn));
-                // Retrieve the selected RadioButton text
-                // inside the OnClickListener
-                int selectedId = gender.getCheckedRadioButtonId();
+
+
+                btn.setOnClickListener(view -> {
+                    String namestr = name.getText().toString();
+                    String birthDaten = birthDate.getText().toString();
+                    String birthYearn = birthYear.getText().toString();
+                    String mobileNon = mobileNo.getText().toString();
+                    String deliveryDaten = deliveryDate.getText().toString();
+                    int age=(2024-Integer.parseInt(birthYearn));
+                    int selectedId = gender.getCheckedRadioButtonId();
                 if (selectedId != -1) {
                     r = findViewById(selectedId);
                     String gendern = r.getText().toString();
 
                     helper.lactatingRegister(namestr, birthDaten, birthYearn, mobileNon, deliveryDaten, gendern);
                     Toast.makeText(LactatingMother_register.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
-
-//                    Intent intent = new Intent(getApplicationContext(), LactatingMother_add.class);
+                    Intent intent = new Intent(getApplicationContext(), LactatingMother_add.class);
 //                    startActivity(intent);
                 } else {
                     // Handle the case where no RadioButton is selected
                     Toast.makeText(LactatingMother_register.this, "Please select gender", Toast.LENGTH_SHORT).show();
                 }
-//                da.addNewLayout();
 
-                listener.onButtonClick();
-                Intent intent = new Intent(LactatingMother_register.this, List1.class);
-                    intent.putExtra("Age",age);
-                intent.putExtra("Mobile",mobileNon);
 
-//                    startActivity(intent);
+//
+                Intent intent = new Intent(LactatingMother_register.this, LactatingMother_add.class);
+
+                    startActivity(intent);
             });
-        }
-    }
+        }}
+
+
